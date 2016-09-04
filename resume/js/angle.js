@@ -1,45 +1,3 @@
-// $(function () {
-//     $('#container').highcharts({
-//         chart: {
-//             polar: true,
-//             type: 'line'
-//         },
-//         // title: {
-//         //     text: 'Budget vs spending',
-//         //     x: -80
-//         // },
-//         pane: {
-//             size: '80%'
-//         },
-//         xAxis: {
-//             categories: ['HTML', 'CSS', 'nodejs', 'angularjs',
-//                          'express', 'Administration'],
-//             tickmarkPlacement: 'on',
-//             lineWidth: 0
-//         },
-//         yAxis: {
-//             gridLineInterpolation: 'polygon',
-//             lineWidth: 0,
-//             min: 0
-//         },
-//         tooltip: {
-//             shared: true,
-//             pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
-//         },
-//         legend: {
-//             align: 'right',
-//             verticalAlign: 'top',
-//             y: 70,
-//             layout: 'vertical'
-//         },
-//         series: [{
-//             name: 'HTML CSS',
-//             data: [43000, 19000, 60000, 35000, 17000, 10000],
-//             pointPlacement: 'on'
-//         }]
-//     });
-// });
-
 var myChart = echarts.init(document.getElementById('main'));
 
 var option = {
@@ -71,7 +29,7 @@ var option = {
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data: [
                 {
-                    value: [4,4,3.5,3.6,3.7,3.2,3,3]
+                    value: [4,4,3.5,3.3,3.7,3.2,3,3]
                 }
             ]
         }
