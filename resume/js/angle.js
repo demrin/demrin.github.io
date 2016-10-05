@@ -9,6 +9,7 @@ var option = {
             indicator: [
                 {text: 'HTML', max: 5},
                 {text: 'CSS', max: 5},
+                {text: 'js', max: 5},
                 {text: 'nodejs', max: 5},
                 {text: 'angularjs', max: 5},
                 {text: 'bootstrap等', max: 5},
@@ -29,7 +30,7 @@ var option = {
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data: [
                 {
-                    value: [4,4,3.5,3.3,3.7,3.2,3,3]
+                    value: [4,4,3.5,3.1,3.4,3.7,3.2,3.6,3.5]
                 }
             ]
         }
