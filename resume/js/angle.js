@@ -11,11 +11,7 @@ var option = {
                 {text: 'CSS', max: 5},
                 {text: 'js', max: 5},
                 {text: 'nodejs', max: 5},
-                {text: 'angularjs', max: 5},
-                {text: 'bootstrap等', max: 5},
-                {text: 'MongoDB', max: 5},
-                {text: 'jquery', max: 5},
-                {text: '其他', max: 5}
+                {text: 'jquery', max: 5}
             ],
             center: ['25%','50%'],
             radius: 80
@@ -30,7 +26,7 @@ var option = {
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data: [
                 {
-                    value: [4,4,3.5,3.1,3.4,3.7,3.2,3.6,3.5]
+                    value: [4,4,3.5,3.1,3.2]
                 }
             ]
         }
