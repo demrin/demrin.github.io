@@ -1,3 +1,6 @@
+/**
+ * Created by demrin on 2016/11/11.
+ */
 function carryMyAjax(url,type,requestData,succeed,failed){
     if(type == 'get' || type == 'GET'){
         var temstrings = '&';
