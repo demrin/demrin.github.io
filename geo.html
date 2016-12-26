@@ -8,22 +8,24 @@
         html,
         body {
             width: 100%;
-            height: 100%
+            height: 100%;
+            text-align: center;
         }
         
-        div {
-            /*height: 100%;*/
-            width: 100%;
+        button{
+            padding: 10px 20px;
+            border-radius: 10px;
             background-color: lightblue;
+            margin: 50px auto;
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <!--<div>
         <h1><a href="tel:15280735935">15280735935</a></h1>
-    </div>
-    <button onclick="getLocation()">这是一个测试</button>
+    </div>-->
+    <button onclick="getLocation()">点击获取定位信息</button>
     <div id="demo"></div>
 
     <!-- JiaThis Button BEGIN -->
@@ -31,22 +33,36 @@
     <!-- JiaThis Button END -->
 
     <script>
-        var x=document.getElementById('demo')
+        // var x=document.getElementById('demo')
+        // function getLocation(){
+        //     ////判断设备是否支持获取坐标信息
+        //     if(navigator.geolocation){
+        //         navigator.geolocation.getCurrentPosition(showPosition,showError)
+        //     }
+        //     else{
+        //         x.innerHTML = 'Geolocation is not supported by this browser'
+        //     }
+        // }
+        // function showPosition(position){
+        //     x.innerHTML = 'Latitude:'+position.coords.latitude+
+        //     '</br>Longitude:'+potition.coords.longitude
+        // }
+        // function showError(err){
+        //     console.log(err)
+        // }
+        
+        var x=document.getElementById("demo");
         function getLocation(){
-            ////判断设备是否支持获取坐标信息
-            if(navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(showPosition,showError)
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
             }
             else{
-                x.innerHTML = 'Geolocation is not supported by this browser'
+                x.innerHTML="Geolocation is not supported by this browser.";
             }
         }
         function showPosition(position){
-            x.innerHTML = 'Latitude:'+position.coords.latitude+
-            '</br>Longitude:'+potition.coords.longitude
-        }
-        function showError(err){
-            console.log(err)
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br />Longitude: " + position.coords.longitude;	
         }
     </script>
 
