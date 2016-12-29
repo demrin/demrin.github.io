@@ -20,3 +20,8 @@ function startAjax(url,type,requestData,succeed,failed){
         var temstrings = new Array()
     }
 }
+
+var alert;
+alert = function(msg){
+    
+}
