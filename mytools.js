@@ -25,3 +25,14 @@ var alert;
 alert = function(msg){
     
 }
+
+/**
+ * 请求加载.....
+ */
+function loading(){
+    setTimeout(
+        function(){
+            $('#loading').hide()
+        },5000
+    )
+}
