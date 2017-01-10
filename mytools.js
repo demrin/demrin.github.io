@@ -1,6 +1,10 @@
 /**
  * Created by demrin on 2016/11/11.
  */
+
+/**
+ * ajax 请求式
+ */
 function startAjax(url,type,requestData,succeed,failed){
     if(type == 'get' || type == 'GET'){
         var temstrings = '&';
@@ -21,6 +25,9 @@ function startAjax(url,type,requestData,succeed,failed){
     }
 }
 
+/**
+ * 警告提示样式
+ */
 var alert;
 alert = function(msg){
     
