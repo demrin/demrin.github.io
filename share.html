@@ -14,6 +14,68 @@
             width:100%;
             background-color:lightblue;
         }
+
+
+        #msg{
+            height: 2rem;
+            text-align: center;
+            position: fixed;
+            top: 0%;
+            line-height: 2rem;
+            width: 100%;
+            z-index: 1000;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+        }
+        #msg span{
+            color: #fff;
+            background: rgb(255,255,255);
+            height: 7rem;width: 70%;
+            padding: 1em 1.5em;
+            display: inline-block;
+            border-radius: 5px;
+            position: relative;
+            top: 40%;
+        }
+        #msg h3{
+            color: #000;
+        }
+        #msg div{
+            width: 70px;height: 70px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: rgb(54, 42, 144);
+            line-height: 70px;
+        }
+        #time{
+            width: 30px;height: 30px;
+            border-radius: 50%;background-color: white;
+            text-align: center;
+        }
+
+
+        /*css 省略加载*/
+        .dotting {
+            display: inline-block; min-width: 2px; min-height: 2px;
+            box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor; /* for IE9+, ..., 3个点 */
+            animation: dot 4s infinite step-start both; /* for IE10+, ... */
+        }
+        .dotting:before { content: '...'; } /* for IE8. 若无需兼容IE8, 此行以及下一行删除*/
+        .dotting::before { content: ''; } /* for IE9+ 覆盖 IE8 */
+        :root .dotting { margin-right: 8px; } /* for IE9+,FF,CH,OP,SF 占据空间*/
+
+        @keyframes dot {
+            25% { box-shadow: none; }                                  /* 0个点 */
+            50% { box-shadow: 2px 0 currentColor; }                    /* 1个点 */
+            75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor;  /* 2个点 */ }
+        }
+
+        #wait{
+            display: inline-block;box-sizing: border-box;
+            width: 7rem;height: 7rem;
+            background-size: 100%;
+            background-image: url(images/fresh1.gif);
+        }
     </style>
 </head>
 
@@ -24,6 +86,7 @@
     <!-- JiaThis Button BEGIN -->
     <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;btn=r5.gif" charset="utf-8"></script>
     <!-- JiaThis Button END -->
+    <script src="mytools.js"></script>
 </body>
 
 </html>
