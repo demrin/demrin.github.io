@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>css3学习</title>
+    <style type="text/css">
+        .d {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid red;
+            border-left-color: green;
+            border-right-color: blue;
+            -webkit-animation: abc 2s infinite linear;
+            animation: abc 2s infinite linear;
+        }
+        /*chrome,Safari,ff,o测试没问题，IE11一闪一闪的*/
+        
+        @keyframes abc {
+            0% {
+                transform: skew(20deg) rotate(0deg);
+            }
+            50% {
+                transform: skew(20deg) rotate(180deg);
+            }
+            100% {
+                transform: skew(20deg) rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes abc {
+            0% {
+                -webkit-transform: skew(20deg) rotate(0deg);
+            }
+            50% {
+                -webkit-transform: skew(20deg) rotate(180deg);
+            }
+            100% {
+                -webkit-transform: skew(20deg) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="abc" class="d"></div>
+</body>
+
+</html>

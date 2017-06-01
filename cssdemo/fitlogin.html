@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>css 登陆特效页面</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            margin: 0;padding: 0;background-color: rgb(255, 255, 255);
+            box-shadow: 11px 11px 11px #25b99e;
+            width: 100%;height: 100%;
+        }
+        /*#fix{
+            position: fixed;
+            background: rgba(0, 0, 0, .3);
+            width: 100%;
+            height: 100%;
+        }*/
+        #login{
+            width: 80%;max-width: 500px;
+            height: 50%;max-height: 400px;
+            display: inline-block;
+            margin: 0 auto;
+            border: 1px solid #25b99e;
+            box-shadow: 3px 7px 7px #25b99e;
+            animation: rotate 1.5s 1 linear;
+
+            /*这两行保证容器水平及上下居中*/
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%); 
+        }
+        @keyframes rotate{
+            0%{
+                transform-origin: 0 50%;
+                transform: rotate(0) scale(0)
+            }
+            10%{transform-origin: 0 50%;
+                transform: rotate(36deg) scale(.25)
+            }
+            20%{transform-origin: 0 50%;
+                transform: rotate(72deg) scale(.5)
+            }
+            30%{transform-origin: 0 50%;
+                transform: rotate(108deg) scale(.75)
+            }
+            40%{transform-origin: 0 50%;
+                transform: rotate(144deg) scale(1)
+            }
+            50%{transform-origin: 0 50%;
+                transform: rotate(180deg) scale(1.25)
+            }
+            60%{transform-origin: 0 50%;
+                transform: rotate(216deg) scale(1.5)
+            }
+            70%{transform-origin: 0 50%;
+                transform: rotate(252deg) scale(1.3)
+            }
+            80%{transform-origin: 0 50%;
+                transform: rotate(288deg) scale(1.2)
+            }
+            90%{transform-origin: 0 50%;
+                transform: rotate(324deg) scale(1.1)
+            }
+            100%{transform-origin: 0 50%;
+                transform: rotate(360deg) scale(1)
+            }
+        }
+        @keyframes translateFadeIn{
+            0%{
+                transform: skew(15deg) rotate(30deg)
+            }
+            25%{
+                transform: skew(30deg) rotate(60deg)
+            }
+            50%{
+                transform: skew(45deg) rotate(90deg)
+            }
+            75%{
+                transform: skew(60deg) rotate(120deg)
+            }
+            100%{
+                transform: skew(75deg) rotate(150deg)
+            }
+        }
+
+        .Conveyor_belt{
+            display: inline-block;
+            width: 80%;max-width: 500px;
+            height: 50px;
+            border: 2px solid #25b99e;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+
+            margin: 50px auto;
+            position: absolute;
+        }
+        .Conveyor_belt .gear{
+            display: inline-block;
+            width: 47px;height: 47px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            /*margin: 0 1.7rem;*/
+            text-align: center;
+        }
+        .Conveyor_belt .gear:nth-child(2){
+            position: relative;
+            left: calc(80% - 47px);
+        }
+        .gear_left{
+            animation: beltrotate 1s infinite linear;
+        }
+        .gear_right{
+            animation: beltrotate 1s infinite linear;
+        }
+        @keyframes beltrotate{
+            form{
+                transform: rotate(0)
+            }to{
+                transform: rotate(360deg)
+            }
+        }
+        @keyframes anti-beltrotate{
+            form{
+                transform: rotate(360deg)
+            }to{
+                transform: rotate(0)
+            }
+        }
+
+
+        .map{
+            height:100px;
+            background:url('https://sf-static.b0.upaiyun.com/v-5798d230/global/img/logo-b.svg') center center no-repeat;
+            animation:spread 5s linear forwards;
+            position:absolute;
+            left:50%;
+            right:50%;
+            text-align:center;
+            border: 7px double skyblue;
+            border-image: url(71.jpg) 100 100;
+        }
+
+        @keyframes spread{
+            form{}
+            to{left:0;right:0;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="login">
+
+    </div>-->
+
+    <div class="Conveyor_belt">
+        <div class="gear">
+            <div class="gear_left" style="width: 100%;height: 2px;text-align: center;top: 49%;position: relative;background-color: #67ed89;"></div>
+        </div>
+        <div class="gear">
+            <div class="gear_right" style="width: 2px;height: 100%;text-align: center;display: inline-block;position: relative;background-color: #67ed89;"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('body').append('<div id="fix"><div id="login"><div class="map"></div></div></div>')
+    </script>
+</body>
+</html>
