@@ -128,32 +128,5 @@
         checkBrowser();
         // by demrin
         
-
-        function count(){
-            var time = 60;
-            var counter = document.getElementById("time");
-            counter.innerHTML = time;
-            var timer = setInterval(function(){
-                time--;
-                counter.innerHTML = time;
-                if(time == 0){
-                    clearInterval(timer);
-                    location.href = 'priceDetail.html?valueId=' + valueId;
-                    // errbox('暂无询价回复')
-                }
-            },1000);
-        }
-
-        function warn(e){
-            $("body").append("<div id='msg'>"+
-                                "<span>"+
-                                "   <div id='wait'>30s</div>"+
-                                // "   <h3>询价中请稍后<big class='dotting'></big></h3>"+
-                                // "   <div id='time'>"+ e +
-                                // "       <input type='text' id='time' value='60'>s "+
-                                // "   </div>"+
-                                "</span>"+
-                            "</div>");
-        }
     })
 })()

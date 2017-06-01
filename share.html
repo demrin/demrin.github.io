@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>这是我的一个share演示demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>waitboxdemo</title>
     <style>
         html,body{
             width:100%;
@@ -39,6 +40,7 @@
         }
         #msg h3{
             color: #000;
+            margin: 0;
         }
         #msg div{
             width: 70px;height: 70px;
@@ -80,13 +82,61 @@
 </head>
 
 <body>
-    <div>
-        <h1><a href="tel:15280735935">15280735935</a></h1>
-    </div>
+    <!--<div id="msg">
+        <span>
+            <div id="wait"></div>
+            <h3>询价预计40S<big class='dotting'></big></h3>
+            <div id="time"></div>
+        </span>
+    </div>-->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <!-- JiaThis Button BEGIN -->
     <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;btn=r5.gif" charset="utf-8"></script>
     <!-- JiaThis Button END -->
     <script src="mytools.js"></script>
+    <script>
+        function warn(e){
+            $("body").append("<div id='msg'>"+
+                                "<span>"+
+                                "   <div id='wait'>0</div>"+
+                                "   <h3>询价预计40S<big class='dotting'></big></h3>"+
+                                // "   <div id='time'>"+ e +
+                                // "       <input type='text' id='time' value='60'>s "+
+                                // "   </div>"+
+                                "</span>"+
+                            "</div>");
+        }
+
+        function count(){
+            var time = 60;
+            var counter = document.getElementById("wait");
+            counter.innerHTML = time;
+            var timer = setInterval(function(){
+                time--;
+                counter.innerHTML = time;
+                if(time == 0){
+                    clearInterval(timer);
+                    location.href = 'priceDetail.html?valueId=' + valueId;
+                    // errbox('暂无询价回复')
+                }
+            },1000);
+        }
+
+        // function warn(e){
+        //     $("body").append("<div id='msg'>"+
+        //                         "<span>"+
+        //                         "   <div id='wait'>30s</div>"+
+        //                         // "   <h3>询价中请稍后<big class='dotting'></big></h3>"+
+        //                         // "   <div id='time'>"+ e +
+        //                         // "       <input type='text' id='time' value='60'>s "+
+        //                         // "   </div>"+
+        //                         "</span>"+
+        //                     "</div>");
+        // }
+
+        warn();
+        count();
+    </script>
 </body>
 
 </html>
