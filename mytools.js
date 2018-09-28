@@ -57,7 +57,6 @@
      * 检测用户是否为手机浏览器打开页面
      */
     (function () {
-        // by demrin
         function checkBrowser() {
             // var ua = navigator;
             // var app = navigator.appVersion;
@@ -126,7 +125,6 @@
         }
 
         checkBrowser();
-        // by demrin
         
     })
 })()
